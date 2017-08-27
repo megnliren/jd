@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>登录</title>
+        <link rel="stylesheet" href="stylesheets/base.css"/>
+        <link rel="stylesheet" href="stylesheets/index.css"/>
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <!--<script type="text/javascript" src="javascripts/jd.js"></script>-->
+    </head>
+    <style type="text/css">
+    .return{
+        margin-left:20px;
+        font:700 20px/30px "microsoft yahei";
+        }
+    .return a:hover{
+        color:lightgray;
+    }
+        
+    label {
+        width: 70px;
+        display: inline-block;
+    }
+    .text {
+        width:180px;
+        height:21px;
+    }
+    .userRed {
+        border: 1px solid red;
+        width:180px;
+        height:21px;
+    }
+    .r-bg{
+       /*width:1000px;*/
+       height: 475px;
+      margin:50px auto;
+       position: relative;
+       background: url("images/register-bg.jpg") no-repeat center #D62B39;
+   }
+    .container {
+        width: 260px;
+        padding: 50px;
+        line-height: 40px;
+        border: 1px solid #999;
+        background: #efefef;
+        position: absolute;
+        top:60px;
+        right:140px;
+
+    }
+    input[type="text"]{
+        width: 150px;
+        height: 20px;
+        color:lightslategray;
+    }
+
+    span {
+        font-size: 12px;
+        color: #ccc;
+    }
+
+
+    .submit {
+    	padding-top:10px;
+    	text-align:center;
+    }
+    .submit input {
+    	width:100px;
+    	height:40px;
+        margin-right:10px;
+    	background-color:green;
+    }
+    .register {
+    	position:absolute;
+    	bottom:10px;
+    	right:10px;
+    	text-align:center;
+    }
+</style>
+
+    <body>
+    <!--site-nav部分start-->
+    <div class="site-nav" id="site-nav">
+        <div class="w">
+            <div class="fl">
+                <div class="site-nav-send">
+                    送至：北京
+                    <i><s>◇</s></i>
+                </div>
+                <div class="site-nav-city"></div>
+            </div>
+            <div class="fr site-nav-r">
+                <ul>
+                    <li>
+                        <a href="#" id="login">你好，请登录</a>&nbsp;
+                        <a href="#" class="col-red">免费注册</a>
+                    </li>
+                    <li class="line"></li>
+                    <li><a href="#">我的订单</a></li>
+                    <li class="line"></li>
+                    <li class="fore my-jd" id="my_jd">
+                        <a href="#">我的京东</a>
+                        <i><s>◇</s></i>
+                        <div class="my-jd-detail">
+                            <div class="my-jd-detail-t">
+                                <dl>
+                                    <dd><a href="#">待处理订单</a></dd>
+                                    <dd><a href="#">返修退换货</a></dd>
+                                    <dd><a href="#">降价商品</a></dd>
+                                </dl>
+                                <dl>
+                                    <dd><a href="#">消息</a></dd>
+                                    <dd><a href="#">我的问答</a></dd>
+                                    <dd><a href="#">我的关注</a></dd>
+                                </dl>
+                            </div>
+                            <div class="my-jd-detail-b">
+                                <dl>
+                                    <dd><a href="#">我的京豆</a></dd>
+                                    <dd><a href="#">我的白条</a></dd>
+                                </dl>
+                                <dl>
+                                    <dd><a href="#">我的优惠券</a></dd>
+                                    <dd><a href="#">我的理财</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="line"></li>
+                    <li><a href="#">京东会员</a></li>
+                    <li class="line"></li>
+                    <li><a href="#">企业采购</a></li>
+                    <li class="line"></li>
+                    <li class="fore jd-tel" id="jd_tel">
+                        <a href="#">手机京东</a>
+                        <span></span>
+                        <i><s>◇</s></i>
+                        <div class="tel-detail">
+                            <div class="tel-detail-t">
+                                <a href="#">手机京东</a>
+                                <p>新人专享大礼包</p>
+                                <p>iPhone Android iPad</p>
+                            </div>
+                            <div class="tel-detail-m">
+                                <a href="#">关注京东微信</a>
+                                <p>微信扫一扫关注</p>
+                                <p>新粉最高180元</p>
+                                <p>惊喜礼包</p>
+                            </div>
+                            <div class="tel-detail-b">
+                                <a href="#">京东金融客户端</a>
+                                <p>新人专享大礼包</p>
+                                <p>iPhone Android</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="line"></li>
+                    <li>
+                        <a href="#">关注京东</a>
+                    </li>
+                    <li class="line"></li>
+                    <li class="fore server" id="server">
+                        客户服务
+                        <i><s>◇</s></i>
+                        <div class="server-detail">
+                            <div class="server-detail-t">
+                                <h3>客户</h3>
+                                <dl>
+                                    <dd><a href="#">帮助中心</a></dd>
+                                    <dd><a href="#">售后服务</a></dd>
+                                    <dd><a href="#">在线客服</a></dd>
+                                    <dd><a href="#">意见建议</a></dd>
+                                </dl>
+                                <dl>
+                                    <dd><a href="#">电话客服</a></dd>
+                                    <dd><a href="#">客服邮箱</a></dd>
+                                    <dd><a href="#">金融咨询</a></dd>
+                                    <dd><a href="#">售全球客服</a></dd>
+                                </dl>
+                            </div>
+                            <div class="server-detail-b">
+                                <h3>商户</h3>
+                                <dl>
+                                    <dd><a href="#">合作招商</a></dd>
+                                    <dd><a href="#">商家后台</a></dd>
+                                    <dd><a href="#">商家帮助</a></dd>
+                                </dl>
+                                <dl>
+                                    <dd><a href="#">京东商学院</a></dd>
+                                    <dd><a href="#">京麦工作台</a></dd>
+                                    <dd><a href="#">规则平台</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="line"></li>
+                    <li class="fore web-nav" id="web_nav">
+                        网站导航
+                        <i><s>◇</s></i>
+
+                        <div class="web-nav-detail">
+                            <div class="web-nav-detail-l">
+                                <h3>特色主题</h3>
+                                <dl>
+                                    <dd><a href="#">京东试用</a></dd>
+                                    <dd><a href="#">京东金融</a></dd>
+                                    <dd><a href="#">全球售</a></dd>
+                                    <dd><a href="#">国际站</a></dd>
+                                    <dd><a href="#">京东会员</a></dd>
+                                </dl>
+                                <dl>
+                                    <dd><a href="#">京东预售</a></dd>
+                                    <dd><a href="#">买什么</a></dd>
+                                    <dd><a href="#">俄语站</a></dd>
+                                    <dd><a href="#">装机大师</a></dd>
+                                    <dd><a href="#">0元评测</a></dd>
+                                </dl>
+                                <dl>
+                                    <dd><a href="#">定期送</a></dd>
+                                    <dd><a href="#">港澳售</a></dd>
+                                    <dd><a href="#">优惠券</a></dd>
+                                    <dd><a href="#">秒杀</a></dd>
+                                    <dd><a href="#">闪购</a></dd>
+                                </dl>
+                                <dl>
+                                    <dd><a href="#">印尼站</a></dd>
+                                    <dd><a href="#">企业金融服务</a></dd>
+                                    <dd><a href="#">In货推荐</a></dd>
+                                    <dd><a href="#">礼品购</a></dd>
+                                    <dd><a href="#">出海招商</a></dd>
+                                </dl>
+                            </div>
+                            <div class="web-nav-detail-m1">
+                                <h3>行业频道</h3>
+                                <dl>
+                                    <dd><a href="#">手机</a></dd>
+                                    <dd><a href="#">智能数码</a></dd>
+                                    <dd><a href="#">玩3C</a></dd>
+                                    <dd><a href="#">电脑办公</a></dd>
+                                    <dd><a href="#">家用电器</a></dd>
+                                </dl>
+                                <dl>
+                                    <dd><a href="#">京东智能</a></dd>
+                                    <dd><a href="#">服装城</a></dd>
+                                    <dd><a href="#">美妆馆</a></dd>
+                                    <dd><a href="#">家装城</a></dd>
+                                    <dd><a href="#">母婴</a></dd>
+                                </dl>
+                                <dl>
+                                    <dd><a href="#">食品</a></dd>
+                                    <dd><a href="#">运动户外</a></dd>
+                                    <dd><a href="#">农资频道</a></dd>
+                                    <dd><a href="#">整车</a></dd>
+                                    <dd><a href="#">图书</a></dd>
+                                </dl>
+                            </div>
+                            <div class="web-nav-detail-m2">
+                                <h3>生活服务</h3>
+                                <dl>
+                                    <dd><a href="#">京东众筹</a></dd>
+                                    <dd><a href="#">白条</a></dd>
+                                    <dd><a href="#">京东金融App</a></dd>
+                                    <dd><a href="#">京东小金库</a></dd>
+                                    <dd><a href="#">理财</a></dd>
+                                </dl>
+                                <dl>
+                                    <dd><a href="#">京东微联</a></dd>
+                                    <dd><a href="#">话费</a></dd>
+                                    <dd><a href="#">水电煤</a></dd>
+                                    <dd><a href="#">彩票</a></dd>
+                                    <dd><a href="#">旅行</a></dd>
+                                </dl>
+                                <dl>
+                                    <dd><a href="#">机票酒店</a></dd>
+                                    <dd><a href="#">电影票</a></dd>
+                                    <dd><a href="#">京东到家</a></dd>
+                                    <dd><a href="#">京东众测</a></dd>
+                                    <dd><a href="#">游戏</a></dd>
+                                </dl>
+                            </div>
+                            <div class="web-nav-detail-r">
+                                <h3>更多精选</h3>
+                                <dl>
+                                    <dd><a href="#">合作招商</a></dd>
+                                    <dd><a href="#">京东通信</a></dd>
+                                    <dd><a href="#">京东E卡</a></dd>
+                                    <dd><a href="#">企业采购</a></dd>
+                                    <dd><a href="#">服务市场</a></dd>
+                                </dl>
+                                <dl>
+                                    <dd><a href="#">办公生活馆</a></dd>
+                                    <dd><a href="#">乡村招募</a></dd>
+                                    <dd><a href="#">校园加盟</a></dd>
+                                    <dd><a href="#">京友邦</a></dd>
+                                    <dd><a href="#">京东社区</a></dd>
+                                </dl>
+                                <dl>
+                                    <dd><a href="#">智能社区</a></dd>
+                                    <dd><a href="#">游戏社区</a></dd>
+                                    <dd><a href="#">知识产权维权</a></dd>
+                                    <dd><a href="#">在线读书</a></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+ <div class="return" ><a href="index.html">返回</a></div>
+
+    <!--site-nav部分end-->
+<div class="r-bg">
+
+  	<div class="container">
+    	<h3>登录</h3>
+        <div id="showInfo" style="color:red;"></div>
+        <form>
+     	<label for="user">用户名</label><input type="text" id="user" name="userId" placeholder="请输入用户名"><span></span><br/>
+		<label for="password">密码</label><input type="password" id="password" name="password" placeholder="请输入密码"><span></span><br/>
+       <div class="submit"><input type="button" value="登录" id="btn"><input type="button" value="重置" id="re" /></div>
+       <div class="register"><a href="register.html">没有账号，立刻前往注册</a></div>
+        </form>
+	</div>
+</div>
+    <script type="text/javascript" src="javascripts/jquery-1.11.1.js"></script>
+    <script>
+
+        var btn = document.getElementById('btn');
+        var re = document.getElementById('re');
+        var user = document.getElementById('user');
+       var username=user.value;
+        var pwd = document.getElementById('password');
+        var password=pwd.value;
+        btn.onclick = function(){
+            var isValidate=false;
+            if (!user.value.match(/^\S{2,20}$/)) {
+                user.className = 'userRed';
+                user.focus();
+                return;
+            } else {
+                user.className = 'text';
+                isValidate=true;
+            }
+
+            if (pwd.value.length<3 || pwd.value.length>20) {
+                pwd.className = 'userRed';
+                pwd.focus();
+                return;
+            } else {
+                pwd.className = 'text';
+                isValidate=true;
+            }
+            if (isValidate) {
+                //ajax发送请求数据
+                $.ajax({
+                    url:"/users",
+                    dataType:"JSON",
+                    data:{userId:"1",password:"123"},
+                    success: function(data){
+                       location.href="index.html?username='+username+'";
+
+                       }
+                })
+
+            }
+        re.onclick = function(){
+            username="";
+            password="";
+        }
+    </script>
+    </body>
+</html>
